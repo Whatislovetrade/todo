@@ -1,42 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client"; // В React 18 используем 'react-dom/client'
-
-const TodoList = () => {
-
-  const items = ['Learn React', 'Build Awesome App']
-
-  return (
-    <ul>
-        <li>{ items[0] }</li>
-        <li>{ items[1] }</li>
-      </ul>
-  )
-}
-
-const AppHeader = () => {
-  return <h1>My Todo List</h1>
-}
-
-const SearchPanel = () => {
-  const searchText = 'Type here to search'
-  const searchStyle = {
-    fontSize: '20px'
-  }
-  return <input style = {searchStyle} placeholder={searchText}></input>
-}
+import AppHeader from "./components/app-header";
+import TodoList from "./components/todo-list";
+import SearchPanel from "./components/search-panel";
 
 const App = () => {
 
-  const value = '<script>alert("")</script>'
-
   return (
     <div>
-      { value }
     <AppHeader />
     <SearchPanel />
     <TodoList />
   </div>
   )
+  
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />)

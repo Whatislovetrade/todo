@@ -13,7 +13,6 @@ const TodoList = ({todos, onDeleted, addItem}) => {
         <TodoListItem 
             {...itemProps }
             onDeleted={() => onDeleted(id)}
-            addItem = {() => addItem('Text')}
           />
       </li>
     )

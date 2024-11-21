@@ -25,7 +25,7 @@ export default class TodoListItem extends Component {
   }
 
   render() {
-    const { label, onDeleted } = this.props,
+    const { label, onDeleted} = this.props,
           { done, important } = this.state
 
       let className = 'todo-list-item'

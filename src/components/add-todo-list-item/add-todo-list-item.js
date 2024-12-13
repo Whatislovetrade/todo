@@ -16,6 +16,9 @@ export default class AddTodoListItem extends Component {
     onSubmit = (e) => {
         e.preventDefault()
         this.props.addItem(this.state.label)
+        this.setState({
+            label: ''
+        })
     }
 
     render() {
@@ -26,6 +29,7 @@ export default class AddTodoListItem extends Component {
                 className="add-item search-input form-control" 
                 onChange={this.onLabelChange}
                 placeholder='Добавить текст'
+                value={this.state.label}
                 />
                 <button 
                     className="btn btn-info"
